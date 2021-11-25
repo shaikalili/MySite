@@ -1,5 +1,6 @@
 body {
-    background-color: #E1F5FE;
+    background-color: #f3f3f3;
+    ;
 }
 
 @font-face {
@@ -2652,4 +2653,88 @@ body {
 
 .fa-fonticons:before {
     content: "\f280"
+}
+
+@media (max-width: 40em) {
+    .close-trigger,
+    .mobile-menu,
+    .nav-toggle {
+        display: block !important;
+    }
+    nav {
+        display: none !important;
+    }
+}
+
+.nav-toggle {
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 90vw;
+}
+
+#menu_checkbox {
+    display: none;
+}
+
+label {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    display: block;
+    width: 30px;
+    height: 30px;
+    transform: translateY(-50%);
+    transition: 0.3s ease transform;
+    cursor: pointer;
+}
+
+label div {
+    width: 6px;
+    height: 6px;
+    background-color: #3286ad;
+    margin-left: 0;
+    margin-bottom: 6px;
+    border-radius: 4px;
+    transition: 0.3s ease width, 0.3s ease margin-left, 0.3s ease margin-bottom, 0.3s ease background-color;
+}
+
+label div:first-child {
+    width: 22px;
+}
+
+label div:nth-child(2) {
+    width: 15px;
+}
+
+label div:last-child {
+    width: 30px;
+    margin-bottom: 0;
+}
+
+#menu_checkbox:checked+label {
+    transform: translateY(-50%) rotateZ(-90deg);
+}
+
+#menu_checkbox:checked+label div {
+    width: 6px;
+    margin-left: 12px;
+    margin-bottom: 3px;
+    background-color: #FFC107;
+}
+
+.mystyle {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5e2a5;
+    height: 100vh;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80vw;
+    color: #FFC107;
 }
